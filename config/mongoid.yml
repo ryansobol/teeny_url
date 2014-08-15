@@ -1,0 +1,8 @@
+development:
+  sessions:
+    default:
+      database: teeny_url
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false
