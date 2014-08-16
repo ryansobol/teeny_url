@@ -11,7 +11,7 @@ bundle install
 
 ### Launch TeenyURL
 
-Run the following command:
+Copy and paste the following command:
 
 ```
 bundle exec puma teeny_url.ru -p 3000
