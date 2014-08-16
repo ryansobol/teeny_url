@@ -4,7 +4,8 @@ class Link
   field :url, type: String
 
   field :slug, type: String, default: -> do
-    (Time.now.to_i + rand(36**8)).to_s(36)
+    random = Time.now.to_i + rand(36**8)
+    random.to_s(36)
   end
 
   field :count, type: Integer, default: 0
