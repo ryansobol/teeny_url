@@ -1,4 +1,4 @@
-class TeenyUrl < Sinatra::Base
+class TeenyURL < Sinatra::Base
   get '/' do
     @links = Link.desc('created_at').limit(10)
 

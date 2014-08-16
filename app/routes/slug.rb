@@ -1,4 +1,4 @@
-class TeenyUrl < Sinatra::Base
+class TeenyURL < Sinatra::Base
   get '/:slug/info' do |slug|
     @link = Link.find_by(slug: slug)
     redirect '/' if @link.nil?
