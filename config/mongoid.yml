@@ -14,3 +14,5 @@ production:
       username: action
       hosts:
         - 127.0.0.1:27017
+  options:
+    raise_not_found_error: false
