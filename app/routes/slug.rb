@@ -1,23 +1,21 @@
-class TeenyURL < Sinatra::Base
-  get '/:slug/info' do |slug|
-    @link = Link.find_by(slug: slug)
-    redirect '/' if @link.nil?
+get '/:slug/info' do |slug|
+  @link = Link.find_by(slug: slug)
+  redirect '/' if @link.nil?
 
-    erb :info
-  end
+  erb :info
+end
 
-  get '/:slug' do |slug|
-    link = Link.find_by(slug: slug)
-    pass if link.nil?
+get '/:slug' do |slug|
+  link = Link.find_by(slug: slug)
+  pass if link.nil?
 
-    link.inc(count: 1)
-    redirect link.url
-  end
+  link.inc(count: 1)
+  redirect link.url
+end
 
-  delete '/:slug' do |slug|
-    link = Link.find_by(slug: slug)
-    link.destroy if link
+delete '/:slug' do |slug|
+  link = Link.find_by(slug: slug)
+  link.destroy if link
 
-    redirect '/'
-  end
+  redirect '/'
 end

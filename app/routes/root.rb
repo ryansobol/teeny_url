@@ -1,13 +1,11 @@
-class TeenyURL < Sinatra::Base
-  get '/' do
-    @links = Link.desc('created_at').limit(10)
+get '/' do
+  @links = Link.desc('created_at').limit(10)
 
-    erb :index
-  end
+  erb :index
+end
 
-  post '/' do
-    link = Link.find_or_create_by(url: params['url'])
+post '/' do
+  link = Link.find_or_create_by(url: params['url'])
 
-    redirect "/#{link.slug}/info"
-  end
+  redirect "/#{link.slug}/info"
 end

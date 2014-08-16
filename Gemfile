@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra'
 gem 'mongoid'
 gem 'puma', require: false
