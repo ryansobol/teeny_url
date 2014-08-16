@@ -45,7 +45,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
   mongoid
   puma
   sinatra (= 1.4.5)
