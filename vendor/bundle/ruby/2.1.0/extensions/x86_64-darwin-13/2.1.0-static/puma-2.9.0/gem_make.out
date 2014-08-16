@@ -39,5 +39,5 @@ compiling puma_http11.c
 linking shared-object puma/puma_http11.bundle
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20140815-55320-1nc3pxn/puma
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20140815-55946-1acqxzu/puma
 installing default puma_http11 libraries

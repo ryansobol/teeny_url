@@ -8,5 +8,5 @@ compiling native.c
 linking shared-object native.bundle
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 native.bundle ./.gem.20140815-55320-7wvxv5
+/usr/bin/install -c -m 0755 native.bundle ./.gem.20140815-55946-1lknmso
 installing default native libraries
