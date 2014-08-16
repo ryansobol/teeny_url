@@ -8,7 +8,7 @@ class TeenyUrl < Sinatra::Base
 
   get '/:slug' do |slug|
     link = Link.find_by(slug: slug)
-    redirect '/' if link.nil?
+    pass if link.nil?
 
     link.inc(count: 1)
     redirect link.url

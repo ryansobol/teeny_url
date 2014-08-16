@@ -18,6 +18,7 @@ class TeenyUrl < Sinatra::Base
 end
 
 require_relative 'app/models/link'
+require_relative 'app/routes/404'
 require_relative 'app/routes/root'
 require_relative 'app/routes/slug'
 
