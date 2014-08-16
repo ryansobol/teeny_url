@@ -1,6 +1,5 @@
 class Link
   include Mongoid::Document
-  include Mongoid::Timestamps::Created
 
   field :url, type: String
 
@@ -9,4 +8,10 @@ class Link
   end
 
   field :count, type: Integer, default: 0
+
+  include Mongoid::Timestamps::Created
+
+  def to_liquid
+    attributes
+  end
 end

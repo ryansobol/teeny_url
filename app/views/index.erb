@@ -1,0 +1,40 @@
+<form action="/" method="post">
+  <div>
+    <label for="url">URL:</label>
+    <input type="url" placeholder="http://" name="url" />
+  </div>
+
+  <div>
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Clear" />
+  </div>
+</form>
+
+<div style="margin-top: 20px;">
+  <% for link in links %>
+    <div>
+      <span style="margin-right: 50px;">
+        <a href="<%= link.url %>"><%= link.url %></a>
+      </span>
+
+      <span style="margin-right: 50px;">
+        <a href="<%= short_url(link) %>"><%= short_url(link) %></a>
+      </span>
+
+      <span style="margin-right: 50px;">
+        <%= link.count %>
+      </span>
+
+      <span style="margin-right: 50px;">
+        <a href="/<%= link.slug %>/info">Info Page</a>
+      </span>
+
+      <span style="margin-right: 50px;">
+        <form action="/<%= link.slug %>" method="post">
+          <input type="hidden" name="_method" value="delete" />
+          <button type="submit">Destroy</button>
+        </form>
+      </span>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<div>
+  <p>
+    URL:
+    <a href="<%= link.url %>"><%= link.url %></a>
+  </p>
+
+  <p>
+    Shorten URL:
+    <a href="<%= short_url(link) %>"><%= short_url(link) %></a>
+  </p>
+
+  <p>
+    Created at:
+    <%= link.created_at %>
+  </p>
+
+  <p>
+    Count:
+    <%= link.count %>
+  </p>
+</div>
