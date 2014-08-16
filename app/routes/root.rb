@@ -7,5 +7,5 @@ end
 post '/' do
   link = Link.find_or_create_by(url: params['url'])
 
-  redirect '/'
+  redirect to('/')
 end

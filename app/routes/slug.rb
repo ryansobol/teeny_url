@@ -13,5 +13,5 @@ delete '/:slug' do |slug|
 
   link.destroy if link
 
-  redirect '/'
+  redirect to('/')
 end
