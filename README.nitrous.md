@@ -14,5 +14,5 @@ bundle install
 Copy and paste the following command:
 
 ```
-bundle exec puma teeny_url.ru -p 3000
+bundle exec puma -p 3000
 ```
