@@ -1,8 +1,9 @@
 require 'bundler'
 Bundler.require
 
-set :views, File.join(settings.root, 'app/views')
-set :public_folder, File.join(settings.root, 'app/assets')
+set :root,           File.join(settings.root, 'app')
+set :views,          File.join(settings.root, 'views')
+set :public_folder,  File.join(settings.root, 'assets')
 
 configure do
   Mongoid.load!('config/mongoid.yml', settings.environment)
