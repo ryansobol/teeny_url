@@ -20,8 +20,8 @@
       </span>
 
       <span style="margin-right: 50px;">
-        <a href="<%= short_url(link) %>" target="_blank">
-          <%= short_url(link) %>
+        <a href="<%= url("/#{link.slug}") %>" target="_blank">
+          <%= url("/#{link.slug}") %>
         </a>
       </span>
 

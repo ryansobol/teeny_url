@@ -9,12 +9,6 @@ configure do
   Mongoid.load!('config/mongoid.yml', settings.environment)
 end
 
-helpers do
-  def short_url(link)
-    "http://#{request.host}:#{request.port}/#{link.slug}"
-  end
-end
-
 require_relative 'app/models/link'
 require_relative 'app/routes/404'
 require_relative 'app/routes/root'
