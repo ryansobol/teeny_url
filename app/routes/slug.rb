@@ -1,9 +1,9 @@
 class TeenyUrl < Sinatra::Base
   get '/:slug/info' do |slug|
-    link = Link.find_by(slug: slug)
-    redirect '/' if link.nil?
+    @link = Link.find_by(slug: slug)
+    redirect '/' if @link.nil?
 
-    erb :info, locals: { link: link }
+    erb :info
   end
 
   get '/:slug' do |slug|
@@ -14,10 +14,8 @@ class TeenyUrl < Sinatra::Base
     redirect link.url
   end
 
-  use Rack::MethodOverride
-
   delete '/:slug' do |slug|
-    link = Link.find_by(slug: params[:slug])
+    link = Link.find_by(slug: slug)
     link.destroy if link
 
     redirect '/'

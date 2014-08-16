@@ -2,6 +2,8 @@ require 'bundler'
 Bundler.require
 
 class TeenyUrl < Sinatra::Base
+  use Rack::MethodOverride
+
   configure do
     Mongoid.load!('config/mongoid.yml', settings.environment)
   end
