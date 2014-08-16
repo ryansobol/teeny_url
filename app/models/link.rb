@@ -10,8 +10,4 @@ class Link
   field :count, type: Integer, default: 0
 
   include Mongoid::Timestamps::Created
-
-  def to_liquid
-    attributes
-  end
 end
