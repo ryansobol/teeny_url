@@ -52,7 +52,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #E74C3C;
+  background: #16A085;
 }
 
 .link {
@@ -90,11 +90,11 @@ button {
   padding: 0;
   font-size: 30px;
   line-height: 0;
-  background: #1ABC9C;
+  background: #E74C3C;
   font-family: 'Audiowide', cursive;
   text-shadow: #2C3E50 2px 1px;
 }
 
 button[type="submit"]:hover {
-  background: #E74C3C;
+  background: #C0392B;
 }
