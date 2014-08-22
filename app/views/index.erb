@@ -2,14 +2,13 @@
 
 <form id="url" action="/" method="post">
   <input type="url" placeholder="http://" name="url" />
-
-  <input type="submit" value="+" />
+  <button id="add" type="submit">+</button>
 </form>
 
 <% for link in @links %>
   <div class="link">
     <span class="column url">
-      <a href="<%= link.url %>">
+      <a href="<%= link.url %>" target="_blank">
         <%= link.url %>
       </a>
     </span>
@@ -27,7 +26,7 @@
     <span class="column action">
       <form action="/<%= link.slug %>" method="post" style="display: inline-block;">
         <input type="hidden" name="_method" value="delete" />
-        <button type="submit">&times;</button>
+        <button id="destroy" type="submit">&times;</button>
       </form>
     </span>
   </div>
