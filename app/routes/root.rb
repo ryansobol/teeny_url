@@ -5,7 +5,7 @@ get '/' do
 end
 
 post '/' do
-  link = Link.find_or_create_by(url: params[:url])
+  Link.find_or_create_by(url: params[:url])
 
   redirect to('/')
 end
